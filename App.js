@@ -14,22 +14,10 @@ export default function App() {
   const [cover_img, setCover_img] = useState('');
   const [numberOfReviews, setNumberOfReviews] = useState(0);
   const [title, setTitle] = useState('');
+ 
   
   function create () {
-
-    // const docRef = await addDoc(collection(db, "books"), {
-    //   authorFirstName: authorFirstName,
-    //   authorSurname: authorSurname,
-    //   available: available,
-    //   cover_img: cover_img,
-    //   numberOfReviews: numberOfReviews,
-    //   title: title,
-    //   location: location
-    // });
-
-   // console.log("Document written with ID: ", docRef.id);
-
-    addDoc(collection(db, "books"), {
+     addDoc(collection(db, "books"), {
       authorFirstName: authorFirstName,
       authorSurname: authorSurname,
       available: available,
@@ -41,8 +29,9 @@ export default function App() {
     }).catch((error) => {
       console.log(error);
     });
+    console.log("Document written with ID: ", docRef.id);
     };
- 
+    
   return (
     <View style={styles.container}>
 
@@ -85,3 +74,26 @@ const styles = StyleSheet.create({
   }
 });
 
+// const docRef = await addDoc(collection(db, "books"), {
+    //   authorFirstName: authorFirstName,
+    //   authorSurname: authorSurname,
+    //   available: available,
+    //   cover_img: cover_img,
+    //   numberOfReviews: numberOfReviews,
+    //   title: title,
+    //   location: location
+    // });
+
+    // addDoc(collection(db, "books"), {
+    //   authorFirstName: authorFirstName,
+    //   authorSurname: authorSurname,
+    //   available: available,
+    //   cover_img: cover_img,
+    //   numberOfReviews: numberOfReviews,
+    //   title: title
+    // }).then(() => {
+    //   console.log('data submitted');
+    // }).catch((error) => {
+    //   console.log(error);
+    // });
+    // };

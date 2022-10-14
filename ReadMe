@@ -27,7 +27,11 @@ Both this application and Bibliotech were added to Firebase as web applications.
 
 While Bibliotech uses Firebase authorisation, this project does not.
 
-This project is a sandbox for writing to the Firestore database.
+This project is a sandbox for writing a new book object to the Firestore database.
+
+When transferring this functionality to Bibliotech, we also included a field for to capture authorised user's unique id from Firebase.auth.
+
+We also made our addBook form require input for only 'title', author details and location, as the rest of the data will not be gathered using user input.
 
 # Dependencies:
 

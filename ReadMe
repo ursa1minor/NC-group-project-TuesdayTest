@@ -5,6 +5,8 @@ This repo contains a test project created during Northcoders final group project
 The main project is Bibliotech - a peer-to-peer booklending app:
 https://github.com/defective-pikachu
 
+This project is a sandbox for writing a new book object to the Firestore database.
+
 Both this project and Bibliotech were created using React Native with Expo, linked to Firebase Firestore database.
 
 # React Native with Expo setup:
